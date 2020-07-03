@@ -8,6 +8,13 @@
 
 
 OUT=$1"_canu"
+ASSEMBLE=$OUT"/asm.contigs.fasta"
+
+SQUAT=$1"_squat"
 
 
-canu -p asm -d $OUT  genomeSize=$2 -pacbio-hifi $1 useGrid=false
+
+#canu -p asm -d $OUT  genomeSize=$2 -pacbio-hifi $1 useGrid=false
+
+
+squat.sh $1 -o $SQUAT -r $ASSEMBLE -t 28

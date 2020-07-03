@@ -16,6 +16,17 @@ chmod +x importer.sh
 conda install -c bioconda canu
 ```
 
+To use squat, you need to install SQUAT from
+
+https://github.com/luke831215/SQUAT
+
+and make sure it is in the system path by running something like in Terminal:
+
+```
+export PATH=/home/[your_username_here]/tool/SQUAT-master/:$PATH >> ~/.bashrc
+```
+
+
 2. Run canu
 
 
