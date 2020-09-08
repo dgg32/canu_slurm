@@ -29,6 +29,10 @@ export PATH=/home/[your_username_here]/tool/SQUAT-master/:$PATH >> ~/.bashrc
 
 2. Run canu
 
+In case you want to customize the coverage settings, add the following parameters in the canu line in importer.sh
+
+> corOutCoverage=10000 corMhapSensitivity=high corMinCoverage=0 redMemory=32 oeaMemory=32 batMemory=200 genomeSize=500m useGrid=false
+
 
 ```
 cd [this_repo_folder]
