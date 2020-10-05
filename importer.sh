@@ -10,11 +10,14 @@
 OUT=$1"_canu"
 ASSEMBLE=$OUT"/asm.contigs.fasta"
 
-SQUAT=$1"_squat"
+#SQUAT=$1"_squat"
 
 
 
-#canu -p asm -d $OUT  genomeSize=$2 -pacbio-hifi $1 useGrid=false
+#canu -p asm -d $OUT corOutCoverage=10000 corMhapSensitivity=high corMinCoverage=0 redMemory=32 oeaMemory=32 batMemory=200 genomeSize=500m useGrid=false genomeSize=$2 -pacbio-hifi $1 useGrid=false
 
+## pacbio official
 
-squat.sh $1 -o $SQUAT -r $ASSEMBLE -t 28
+canu -assemble -p asm -d $OUT genomeSize=$2 -maxInputCoverage=5000 -pacbio-hifi $1 batOptions="-eg 0.0 -sb 0.001 -dg 0 -db 3 -dr 0 -ca 2000 -cp 200"
+
+#squat.sh $1 -o $SQUAT -r $ASSEMBLE -t 28
