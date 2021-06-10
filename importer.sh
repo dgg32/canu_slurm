@@ -13,7 +13,15 @@ ASSEMBLE=$OUT"/asm.contigs.fasta"
 
 ## pacbio official
 
+<<<<<<< HEAD
 echo  $file_list
+=======
+canu -p asm -d $OUT  genomeSize=$2 -pacbio-hifi $1 useGrid=false
+>>>>>>> 7aeaf24853d3f36d24a52cc0ddac30b7c4b3b715
 
 canu -assemble -p asm -d $OUT genomeSize=$2 -maxInputCoverage=5000 useGrid=false batOptions="-eg 0.0 -sb 0.001 -dg 0 -db 3 -dr 0 -ca 2000 -cp 200" -pacbio-hifi $file_list 
 
+<<<<<<< HEAD
+=======
+squat.sh $1 -o $SQUAT -r $ASSEMBLE -t 28
+>>>>>>> 7aeaf24853d3f36d24a52cc0ddac30b7c4b3b715
