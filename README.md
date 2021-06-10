@@ -37,7 +37,7 @@ In case you want to customize the coverage settings, add the following parameter
 ```
 cd [this_repo_folder]
 
-./submit.sh [input_file] [estimate_size]
+./submit.sh [input_folder] [estimate_size]
 ```
 
 Example:
@@ -45,7 +45,7 @@ Example:
 ```
 cd canu_slurm
 
-./submit.sh '/home/sih13/tmp/ExportJob_809_20200430-105153/call-export_fastq/execution/m64090_200424_131344.Q20.fastq' 300m
+./submit.sh '/home/sih13/tmp/ExportJob_809_20200430-105153/call-export_fastq/execution/' 300m
 ```
 
 Checked whether the job is finished via squeue.
